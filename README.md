@@ -1,11 +1,11 @@
-# Blockbio 🐦 Hive Chain Info for Your Twitter Bio
+# Blockbio-Hive 🐦 Hive Chain Info for Your Twitter Bio
 
 ## Inspiration
-This project was forked from https://github.com/russeree/blockbio and adapted for Hive blockchain.
+This project was forked from https://github.com/russeree/blockbio and adapted for the Hive blockchain.
 
 ## What this repo is
 This is a loose NodeJS Script to update your twitter bio 'description' with 
-the latest USD/Hive pair price priced from CoinGecko. This script is meant to be ran in the form of
+the latest Hive block height, Hive supply and HBD supply. Alternatively, it can use USD/Hive pair price priced from CoinGecko. This script is meant to be run in the form of
 
 `path/to/node app.js`
 
@@ -24,8 +24,7 @@ HIVE_API_NODE=""
 This project is a non-production release designed to just be a **proof of concept**. 
 
 ## What this repo is not
-This is not a readymade application, steps must be taken to obtain
-a compatible API key with read/write permissions to your twitter profile
+This is not a ready-made application, steps must be taken to obtain a compatible API key with read/write permissions to your twitter profile.
 
 ## How to get your Twitter API keys (v1.1) required
 To do this you will need to sign up for the Twitter API v2.0 which is free and automatic. Do this at the [Twitter Developer Portal](https://developer.twitter.com/ "Twitter Developer Portal"). After registering create a 'standalone app'. You now need to obtain elevated access to the Twitter API v.1.1 to be able to change your profile desctipion (bio) after that apply for elevated access. The aproval proccess involves an email and aproval in around 48 hours. Next setup Oauth 1.0 Access and enabled read/write.
