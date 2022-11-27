@@ -1,19 +1,15 @@
-# Blockbio 🐦 Bitcoin Timechain Info for Your Twitter Bio
+# Blockbio 🐦 Hive Chain Info for Your Twitter Bio
 
 ## Inspiration
-This project was formed out of a weekend warmup exercise with the goal 
-of creating unique updates to my 'bio' to prevent impersonating accounts
-from having a look of being genuine. This is because twitter bots don't
-update frequently and will not carry the latest price and timestamp attached 
-to their bio.
+This project was forked from https://github.com/russeree/blockbio and adapted for Hive blockchain.
 
 ## What this repo is
 This is a loose NodeJS Script to update your twitter bio 'description' with 
-the latest USD/BTC pair price priced from CoinGecko. This script is meant to be ran in the form of
+the latest USD/Hive pair price priced from CoinGecko. This script is meant to be ran in the form of
 
 `path/to/node app.js`
 
-To customize this script to fit your needs edit the class constructor argument for `BlockBio` to fit your profile 'bio' please remember the 160 char limit on your bio. The addition of the price and timestamp consumes ~35 characters when the timezone is included. 
+To customize this script to fit your needs edit the class constructor argument for `BlockBio` to fit your profile 'bio' please remember the 160 char limit on your bio.
 
 There also needs to be a `.env` file inyour project directory of the format ...
 
