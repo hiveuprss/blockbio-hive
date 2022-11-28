@@ -42,12 +42,14 @@ class BlockBio{
         
         const chainInfo = await this.database.getDynamicGlobalProperties()
         //console.log(chainInfo)
-        console.log(`Updating Twitter description with block height: ${chainInfo.head_block_number}`)
+        const blockHeight = chainInfo.head_block_number.toLocaleString()
+        const hiveSupply = parseFloat(chainInfo.current_supply.split(' ')[0]).toLocaleString()
+        const hbdSupply = parseFloat(chainInfo.current_hbd_supply.split(' ')[0]).toLocaleString()
+        const bioText = `${this.bioText} ♦️⛓ real-time stats - block height: ${blockHeight} | $HIVE supply: ${hiveSupply} | $HBD supply: ${hbdSupply}`
+        
+        console.log(`Updating Twitter description with: ${bioText}`)
         try {
-            const blockHeight = chainInfo.head_block_number
-            const hiveSupply = chainInfo.current_supply
-            const hbdSupply = chainInfo.current_hbd_supply
-            await this.client.v1.updateAccountProfile({description: `${this.bioText} - ♦️⛓ Hive block height: ${blockHeight}, $HIVE supply: ${hiveSupply}, $HBD supply: ${hbdSupply}`});
+            await this.client.v1.updateAccountProfile({description: bioText});
         } catch (e) {
             console.log(e)
         }
